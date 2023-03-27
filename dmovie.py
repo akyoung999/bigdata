@@ -1,6 +1,7 @@
 # 다음 영화 순위 크롤링 하는 프로그램
 import requests
 from bs4 import BeautifulSoup
+import csv
 
 # 다음 영화 순위 페이지 URL
 url = "https://movie.daum.net/ranking/reservation"
