@@ -17,7 +17,7 @@ if response.status_code == 200:
     rank = 0
     movie_list = soup.select(".thumb_cont")
     for tr in movie_list:
-        rank = rank + 1
+        
         a_tag = tr.select_one("a")
         print(f'{rank}위 {a_tag.text}')
         txt_grade = tr.select_one("span.txt_grade")
@@ -26,5 +26,6 @@ if response.status_code == 200:
         print(f'예매율: {txt_num.text}')
         txt_date = tr.select_one(".txt_info > span.txt_num")
         print(f'개봉날짜: {txt_date.text}')
+        rank = rank + 1
 else:
     print("HTTP 요청 실패")
