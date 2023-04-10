@@ -3,6 +3,11 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
+
+# 내가 만든 모듈(함수)를 포함
+# import func
+from func import my_print
+
 # 다음 영화 순위 페이지 URL
 url = "https://movie.daum.net/ranking/reservation"
 
@@ -17,7 +22,7 @@ if response.status_code == 200:
     rank = 0
     movie_list = soup.select(".thumb_cont")
     for tr in movie_list:
-        
+        rank = rank + 1
         a_tag = tr.select_one("a")
         print(f'{rank}위 {a_tag.text}')
         txt_grade = tr.select_one("span.txt_grade")
@@ -26,6 +31,6 @@ if response.status_code == 200:
         print(f'예매율: {txt_num.text}')
         txt_date = tr.select_one(".txt_info > span.txt_num")
         print(f'개봉날짜: {txt_date.text}')
-        rank = rank + 1
+        
 else:
     print("HTTP 요청 실패")
