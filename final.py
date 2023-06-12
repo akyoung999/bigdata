@@ -5,58 +5,58 @@ def get_mbti_type():
     judging_score = 0
 
     # '선호하는 세계'에 대한 질문
-    answer = input("다른 사람들과 함께 시간을 보내는 것에 에너지를 얻는 편인가? (예/아니오): ")
+    answer = input("질문1. 새로운 장소에서 모르는 사람에게 먼저 인사를 건네는 편인가요? (예/아니오): ")
     if answer.lower() == "예":
         extroversion_score += 1
 
-    answer = input("혼자만의 시간을 갖는 것에 에너지를 얻는 편인가? (예/아니오): ")
+    answer = input("질문2. 쉬는 날에는 집에 있어야 회복 되나요? (예/아니오): ")
     if answer.lower() == "아니오":
         extroversion_score += 1
 
-    answer = input("친구들과 함께 있지 않으면 외로운가? (예/아니오): ")
+    answer = input("질문3. 기분이 안 좋을 때 사람을 만나면 기분이 나아지나요? (예/아니오): ")
     if answer.lower() == "예":
         extroversion_score += 1
 
 
     # '정보 수집 방식'에 대한 질문
-    answer = input("세부사항에 주목하고 구체적인 정보를 선호하는 편인가? (예/아니오): ")
+    answer = input("질문4. 노래를 들을 때 가사보다 멜로디를 더 중점적으로 듣나요? (예/아니오): ")
     if answer.lower() == "예":
         sensing_score += 1
 
-    answer = input("큰 그림을 그리고 추상적인 아이디어에 주목하는 편인가? (예/아니오): ")
+    answer = input("질문 5. 시나 소설, 혹은 가정에 대해 말하는 것을 좋아하나요? (예/아니오): ")
     if answer.lower() == "아니오":
         sensing_score += 1
 
-    answer = input("경험을 중점적으로 생각하고 판단을 내리는가? (예/아니오): ")
+    answer = input("질문 6. 처음 해보는 요리를 할 때 정량을 철저히 지키는 편인가요? (예/아니오): ")
     if answer.lower() == "예":
         sensing_score += 1
 
 
     # '생활 방식'에 대한 질문
-    answer = input("문제를 해결할 때 논리적인 분석과 객관적인 판단에 의존하는 편인가? (예/아니오): ")
-    if answer.lower() == "예":
-        thinking_score += 1
-
-    answer = input("다른 사람들의 감정과 가치를 고려하여 결정하는 편인가? (예/아니오): ")
+    answer = input("질문 7. 결과보다는 과정을 더 중요하다고 생각하나요? (예/아니오): ")
     if answer.lower() == "아니오":
         thinking_score += 1
 
-    answer = input("친구에게 조언을 하는 것을 좋아하는가? (예/아니오): ")
+    answer = input("질문 8. 다른 사람이 울고 있다면 그 마음에 공감해주고 싶나요?? (예/아니오): ")
+    if answer.lower() == "아니오":
+        thinking_score += 1
+
+    answer = input("질문 9. 친구에게 현실적으로 조언을 하는 편인가요? (예/아니오): ")
     if answer.lower() == "예":
         thinking_score += 1
 
 
     # '결정 방식'에 대한 질문
-    answer = input("계획을 세우고 일을 진행하는 것을 선호하는 편인가? (예/아니오): ")
+    answer = input("질문 10. 계획을 세세하게 세운 이후 진행하는 것을 선호하는 편인가요? (예/아니오): ")
     if answer.lower() == "예":
         judging_score += 1
 
-    answer = input("유연하게 일하는 것을 선호하는 편인가? (예/아니오): ")
+    answer = input("질문 11. 시험 며칠 전부터 벼락치기를 시작하나요? (예/아니오): ")
     if answer.lower() == "아니오":
         judging_score += 1
 
-    answer = input("자신의 일이 계획대로 진행되지 않으면 스트레스를 받는가? (예/아니오): ")
-    if answer.lower() == "예":
+    answer = input("질문 12. 자신의 일이 계획대로 진행되지 않아도 유연하게 방법을 찾는 편인가요? (예/아니오): ")
+    if answer.lower() == "아니오":
         judging_score += 1
 
 
